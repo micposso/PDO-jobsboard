@@ -1,0 +1,29 @@
+{
+  "name": "jobboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "postcss src/styles.css -o dist/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micposso/PDO-jobsboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micposso/PDO-jobsboard/issues"
+  },
+  "homepage": "https://github.com/micposso/PDO-jobsboard#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.1",
+    "postcss-uncss": "^0.17.0",
+    "tailwindcss": "^1.4.6",
+    "uncss": "^0.17.3"
+  }
+}

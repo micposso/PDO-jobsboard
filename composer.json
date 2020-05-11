@@ -1,0 +1,6 @@
+{
+    "name": "mp/jobboard",
+    "require": {
+        "vlucas/phpdotenv": "^4.1"
+    }
+}

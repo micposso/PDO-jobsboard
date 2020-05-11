@@ -1,6 +1,6 @@
 <?php
 // Confi file
-require_once 'config.php';
+require_once './config.php';
 
 
 // Autoloader
@@ -9,6 +9,3 @@ function my_autoloader($class_name){
 }
 
 spl_autoload_register('my_autoloader');
-
-echo 'test';
-
