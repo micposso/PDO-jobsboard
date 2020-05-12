@@ -21,6 +21,7 @@
   "homepage": "https://github.com/micposso/PDO-jobsboard#readme",
   "dependencies": {
     "autoprefixer": "^9.7.6",
+    "live-server": "^1.2.1",
     "postcss-cli": "^7.1.1",
     "postcss-uncss": "^0.17.0",
     "tailwindcss": "^1.4.6",
