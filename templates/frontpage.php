@@ -6,10 +6,18 @@
       </p>
       <p><a href="" class="btn btn-lg btn-success">Register</a></p>
   </div>
-  <div class="row marketing">
-    <div class="col-lg-6">
-      <h4>Subheading</h4>
+
+  <?php foreach($jobs as $job): ?>
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h3><?php echo $job->job_title; ?></h3>
+        <p><?php echo $job->description; ?></p>
+        <span><?php echo $job->post_date; ?></span> | <span><?php echo $job->cname; ?></span>
+        <p><a href="" class="btn btn-lg btn-success">Apply</a></p>
+      </div>
     </div>
-  </div>
+  <?php endforeach; ?>
+
+
 
 <?php include '../includes/footer.php'; ?>
