@@ -20,4 +20,13 @@ class Job{
 
     return $results;
   }
+
+  // Get categories function
+  public function getCategories() {
+    $this->db->query("SELECT * from categories");
+
+    $results =  $this->db->resultSet();
+
+    return $results;
+  }
 }
