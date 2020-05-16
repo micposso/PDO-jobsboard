@@ -12,7 +12,8 @@ $category = isset($_GET['category']) ? $_GET['category'] : null;
 // test for the category ID and return only jobs with that category or just all jobs
 // create a new getByCategory method in the job class
 if($category){
-        $template->jobs = $job->getByCategory($category);
+        $template->jobs = $job->getJobByCategory($category);
+        $template->title = 'Jobs In '. $job->getCategory($category)->name;
 } else {
         $template->title = 'Latest Jobs';
         $template->jobs = $job->getAllJobs();

@@ -31,7 +31,7 @@ class Job{
   }
 
   // Get jobs by category
-  public function getByCategory($category) {
+  public function getJobByCategory($category) {
     // New SQL query using WHERE to return only jobs that match the ID of the category from the form
     $this->db->query("SELECT jobs.*, categories.name AS cname
                       FROM jobs
@@ -44,5 +44,15 @@ class Job{
     $results =  $this->db->resultSet();
 
     return $results;
+  }
+
+  public function getCategory($category_id) {
+    $this->db->query("SELECT * FROM categories WHERE id = :category_id");
+    $this->db->bind(':category_id', $category_id);
+
+    // Assign Row
+    $row = $this->db->single();
+
+    return $row;
   }
 }

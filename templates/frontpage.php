@@ -19,7 +19,7 @@
       <input class="bnt btn-lg btn-success" type="submit" value="FIND">
     </form>
   </div>
-
+  <h3>Latest jobs in<?php echo $title; ?></h3>
   <?php foreach($jobs as $job): ?>
     <div class="row marketing">
       <div class="col-lg-6">
