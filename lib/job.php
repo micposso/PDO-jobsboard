@@ -29,4 +29,20 @@ class Job{
 
     return $results;
   }
+
+  // Get jobs by category
+  public function getByCategory($category) {
+    // New SQL query using WHERE to return only jobs that match the ID of the category from the form
+    $this->db->query("SELECT jobs.*, categories.name AS cname
+                      FROM jobs
+                      INNER JOIN categories
+                      ON jobs.category_id = categories.id
+                      WHERE jobs.category_id = $category
+                      ORDER BY post_date DESC
+                      ");
+
+    $results =  $this->db->resultSet();
+
+    return $results;
+  }
 }

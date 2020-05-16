@@ -15,6 +15,8 @@
           </option>
         <?php endforeach;  ?>
       </select>
+      <br>
+      <input class="bnt btn-lg btn-success" type="submit" value="FIND">
     </form>
   </div>
 
