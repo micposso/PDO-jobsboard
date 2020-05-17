@@ -26,7 +26,7 @@
         <h3><?php echo $job->job_title; ?></h3>
         <p><?php echo $job->description; ?></p>
         <span><?php echo $job->post_date; ?></span> | <span><?php echo $job->cname; ?></span>
-        <p><a href="" class="btn btn-lg btn-success">Apply</a></p>
+        <p><a href="job.php?id=<?php echo $job->id; ?>" class="btn btn-lg btn-success">Apply</a></p>
       </div>
     </div>
   <?php endforeach; ?>
