@@ -12,9 +12,8 @@
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation"><a href="">Home</a></li>
-          <li role="presentation"><a href="">About</a></li>
-          <li role="presentation"><a href="">Contact</a></li>
+          <li role="presentation"><a href="index.php">Home</a></li>
+          <li role="presentation"><a href="create.php">Create Listing</a></li>
         </ul>
       </nav>
       <h3 class="text-muted">Project Name</h3>
