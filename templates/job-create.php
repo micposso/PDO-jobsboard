@@ -6,8 +6,8 @@
       <input name="company" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="company">Category</label>
-      <select name="category" id="">
+      <label for="category_id">Category</label>
+      <select name="category_id" id="">
         <?php foreach($categories as $category): ?>
           <option value="<?php echo $category->id; ?>">
             <?php echo $category->name; ?>
@@ -16,8 +16,8 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="title">Job Title</label>
-      <input name="title" type="text" class="form-control">
+      <label for="job_title">Job Title</label>
+      <input name="job_title" type="text" class="form-control">
     </div>
     <div class="form-group">
       <label for="description">Job Description</label>
@@ -33,12 +33,12 @@
       <input name="salary" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="contact">Contact User</label>
-      <input name="contact" type="text" class="form-control">
+      <label for="contact_user">Contact User</label>
+      <input name="contact_user" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="email">Contact email</label>
-      <input name="email" type="text" class="form-control">
+      <label for="contact_email">Contact email</label>
+      <input name="contact_email" type="text" class="form-control">
     </div>
     <div class="form-group">
       <label for="date">Date</label>
