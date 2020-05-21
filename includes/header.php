@@ -18,4 +18,4 @@
       </nav>
       <h3 class="text-muted">Project Name</h3>
     </div>
-  
+  <?php displayMessage(); ?>

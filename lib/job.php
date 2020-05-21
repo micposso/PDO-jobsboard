@@ -71,12 +71,12 @@ class Job{
   // Create job
   public function create($data) {
     // Insert Query
-    $this->db->query("INSERT INTO jobs (category_id, job_title, description, salary, location, contact_user, contact_email, state, level, post_date) 
-                      VALUES (:category_id, :job_title, :description, :salary, :location, :contact_user, :contact_email, :state, :level, :post_date)");
+    $this->db->query("INSERT INTO jobs (category_id, company, job_title, description, salary, location, contact_user, contact_email, state, level, post_date) 
+                      VALUES (:category_id, :company, :job_title, :description, :salary, :location, :contact_user, :contact_email, :state, :level, :post_date)");
     // Bind Data
     $this->db->bind(':category_id', $data['category_id']);
-    $this->db->bind(':job_title', $data['job_title']);
     $this->db->bind(':company', $data['company']);
+    $this->db->bind(':job_title', $data['job_title']);
     $this->db->bind(':description', $data['description']);
     $this->db->bind(':location', $data['location']);
     $this->db->bind(':salary', $data['salary']);

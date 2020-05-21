@@ -21,7 +21,11 @@ if(isset($_POST['submit'])) {
   $data['post_date'] = $_POST['post_date'];
 
   // check all data came through and redirect to homepage or throw error
-
+  if($job->create($data)) {
+    redirect('index.php', 'Your job was created', 'success');
+  } else {
+    redirect('index.php', 'Something was wrong', 'error');
+  }
 }
 
 $template = new Template('templates/job-create.php');
