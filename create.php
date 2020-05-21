@@ -16,7 +16,12 @@ if(isset($_POST['submit'])) {
   $data['salary'] = $_POST['salary'];
   $data['contact_user'] = $_POST['contact_user'];
   $data['contact_email'] = $_POST['contact_email'];
-  $data['date'] = $_POST['date'];
+  $data['state'] = $_POST['state'];
+  $data['level'] = $_POST['level'];
+  $data['post_date'] = $_POST['post_date'];
+
+  // check all data came through and redirect to homepage or throw error
+
 }
 
 $template = new Template('templates/job-create.php');

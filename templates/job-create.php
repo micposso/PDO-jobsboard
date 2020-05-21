@@ -29,6 +29,18 @@
       <input name="location" type="text" class="form-control">
     </div>
     <div class="form-group">
+      <label for="state">State</label>
+      <input name="state" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="level">Level</label>
+      <select name="level" class="form-control">
+        <option value="associate">Associate</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+      </select>
+    </div>
+    <div class="form-group">
       <label for="salary">Salary</label>
       <input name="salary" type="text" class="form-control">
     </div>
@@ -41,8 +53,8 @@
       <input name="contact_email" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="date">Date</label>
-      <input name="date" type="date" class="form-control">
+      <label for="post_date">Date</label>
+      <input name="post_date" type="date" class="form-control">
     </div>
     <input type="submit" class="btn btn-lg btn-success" value="submit" name="submit">
   </form>
