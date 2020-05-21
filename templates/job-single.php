@@ -7,4 +7,7 @@
       <small><?php echo $job->post_date; ?></small>
       <p><a href="" class="btn btn-lg btn-success">Apply</a></p>
   </div>
+  <div>
+    <a href="index.php">go back</a>
+  </div>
 <?php include '../includes/footer.php'; ?>
