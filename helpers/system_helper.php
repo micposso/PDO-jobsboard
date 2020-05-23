@@ -18,7 +18,8 @@ function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
     $_SESSION['message_type'] = $message_type;
   }
 
-  header ('Location' . $location);
+  header('Location: ' . $location);
+  echo $location;
   exit;
 
 }
@@ -26,6 +27,7 @@ function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
 //display the message
 function displayMessage() {
   if(!empty($_SESSION['message'])) {
+
     $message = $_SESSION['message'];
 
     if(!empty($_SESSION['message_type'])) {
