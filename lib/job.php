@@ -1,5 +1,6 @@
 <?php
-class Job{
+class Job
+{
   private $db;
 
   public function __construct()
@@ -8,7 +9,8 @@ class Job{
   }
 
   // Get all jobs
-  public function getAllJobs(){
+  public function getAllJobs()
+  {
     $this->db->query("SELECT jobs.*, categories.name AS cname
                       FROM jobs
                       INNER JOIN categories
@@ -22,7 +24,8 @@ class Job{
   }
 
   // Get categories function
-  public function getCategories() {
+  public function getCategories()
+  {
     $this->db->query("SELECT * from categories");
 
     $results =  $this->db->resultSet();
@@ -31,7 +34,8 @@ class Job{
   }
 
   // Get jobs by category
-  public function getJobByCategory($category) {
+  public function getJobByCategory($category)
+  {
     // New SQL query using WHERE to return only jobs that match the ID of the category from the form
     $this->db->query("SELECT jobs.*, categories.name AS cname
                       FROM jobs
@@ -46,7 +50,8 @@ class Job{
     return $results;
   }
 
-  public function getCategory($category_id) {
+  public function getCategory($category_id)
+  {
     $this->db->query("SELECT * FROM categories WHERE id = :category_id");
     $this->db->bind(':category_id', $category_id);
 
@@ -57,7 +62,8 @@ class Job{
   }
 
   // Get Job
-  public function getJob($id) {
+  public function getJob($id)
+  {
     $this->db->query("SELECT * FROM jobs WHERE id = :id");
 
     $this->db->bind(':id', $id);
@@ -69,7 +75,8 @@ class Job{
   }
 
   // Create job
-  public function create($data) {
+  public function create($data)
+  {
     // Insert Query
     $this->db->query("INSERT INTO jobs (category_id, company, job_title, description, salary, location, contact_user, contact_email, state, level, post_date) 
                       VALUES (:category_id, :company, :job_title, :description, :salary, :location, :contact_user, :contact_email, :state, :level, :post_date)");
@@ -87,11 +94,23 @@ class Job{
     $this->db->bind(':post_date', $data['post_date']);
 
     //execute
-    if($this->db->execute()){
+    if ($this->db->execute()) {
       return true;
     } else {
       return false;
     }
+  }
 
-    }
+  // delete job
+  public function delete($id)
+  {
+    $this->db->query("DELETE from jobs WHERE id = $id");
+
+        //execute
+        if ($this->db->execute()) {
+          return true;
+        } else {
+          return false;
+        }
+  }
 }
