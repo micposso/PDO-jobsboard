@@ -106,11 +106,48 @@ class Job
   {
     $this->db->query("DELETE from jobs WHERE id = $id");
 
-        //execute
-        if ($this->db->execute()) {
-          return true;
-        } else {
-          return false;
-        }
+    //execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // Create job
+  public function update($id, $data)
+  {
+    // Insert Query
+    $this->db->query("UPDATE jobs
+                       SET (category_id = :category_id, 
+                            company = :company, 
+                            job_title = :job_title, 
+                            description = :description, 
+                            salary = :salary, 
+                            location = :location, 
+                            contact_user = :contact_user, 
+                            contact_emai = :contact_email, 
+                            state = :state, 
+                            level = :level, 
+                            post_date = :post_date)");
+    // Bind Data
+    $this->db->bind(':category_id', $data['category_id']);
+    $this->db->bind(':company', $data['company']);
+    $this->db->bind(':job_title', $data['job_title']);
+    $this->db->bind(':description', $data['description']);
+    $this->db->bind(':location', $data['location']);
+    $this->db->bind(':salary', $data['salary']);
+    $this->db->bind(':contact_user', $data['contact_user']);
+    $this->db->bind(':contact_email', $data['contact_email']);
+    $this->db->bind(':state', $data['state']);
+    $this->db->bind(':level', $data['level']);
+    $this->db->bind(':post_date', $data['post_date']);
+
+    //execute
+    if ($this->db->execute()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
