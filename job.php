@@ -9,6 +9,7 @@ if(isset($_POST['delete_id'])) {
   $delete_id = $_POST['delete_id'];
   // check if function delete is available on the job class
   if($job->delete($delete_id)) {
+    var_dump($_POST);
     redirect('index.php', 'job is deleted', 'success');
   } else {
     redirect('index.php', 'there as a problem deleting the job', 'error');

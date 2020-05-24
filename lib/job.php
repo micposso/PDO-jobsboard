@@ -114,7 +114,7 @@ class Job
     }
   }
 
-  // Create job
+  // Update job
   public function update($id, $data)
   {
     // Insert Query
